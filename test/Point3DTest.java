@@ -21,7 +21,7 @@ public class Point3DTest {
         assertEquals(p2.getZ(), -5.0);
 
         Point3D p3 = new Point3D(5,-3,10);
-        p3.translate(0,0);
+        p3.translate(0,0,0);
         assertEquals(p3.getX(), 5.0);
         assertEquals(p3.getY(), -3.0);
         assertEquals(p3.getZ(), 10.0);
@@ -29,7 +29,12 @@ public class Point3DTest {
 
     @Test
     public void testIsOrigin() throws Exception {
-
+        Point3D p = new Point3D(0,0,0);
+        assertTrue(p.isOrigin());
+        Point3D p2 = new Point3D(0,7,1);
+        assertFalse(p2.isOrigin());
+        Point3D p3 = new Point3D(0,-5,0);
+        assertFalse(p3.isOrigin());
     }
 
     @Test
