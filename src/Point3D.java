@@ -16,7 +16,7 @@ public class Point3D extends Point2D {
 
     public void translate(double dx, double dy, double dz) {
         super.translate(dx, dy);
-        this.z = dz;
+        this.z = z + dz;
     }
 
     @Override
