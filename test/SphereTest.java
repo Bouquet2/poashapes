@@ -19,7 +19,7 @@ public class SphereTest {
         assertEquals(s3.volume(), 268.082573106329);
 
         Sphere s4 = new Sphere(8);
-        assertNotEquals(s2.volume(), 57.0);
+        assertNotEquals(s4.volume(), 57.0);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class SphereTest {
         assertEquals(s3.surface(), 50.26548245743669);
 
         Sphere s4 = new Sphere(7);
-        assertNotEquals(s2.surface(), 48.265);
+        assertNotEquals(s4.surface(), 48.265);
     }
 
 }
