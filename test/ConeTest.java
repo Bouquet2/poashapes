@@ -20,7 +20,14 @@ public class ConeTest {
 
     @Test
     public void testVolume() throws Exception {
+        Cone c = new Cone(10,3);
+        assertEquals(c.volume(), 20.0);
 
+        Cone c2 = new Cone(0,0);
+        assertEquals(c2.volume(), 0.0);
+
+        Cone c3 = new Cone(9,55);
+        assertNotEquals(c3.volume(), 9.51);
     }
 
     @Test
