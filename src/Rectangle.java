@@ -6,6 +6,18 @@ public class Rectangle extends Shape2D{
     private double length;
     private double width;
 
+    public Rectangle(double length, double width) {
+        super();
+        this.length = length;
+        this.width = width;
+    }
+
+    public Rectangle(Point2D refPoint, double length, double width) {
+        super(refPoint);
+        this.length = length;
+        this.width = width;
+    }
+
     @Override
     public double perimeter() {
         return 2 * (length + width);
