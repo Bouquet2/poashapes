@@ -24,7 +24,18 @@ public class SphereTest {
 
     @Test
     public void testSurface() throws Exception {
+        Sphere s = new Sphere(6);
+        assertEquals(s.surface(), 452.3893421169302);
 
+        Sphere s2 = new Sphere(0);
+        assertEquals(s2.surface(), 0.0);
+
+        Point3D p = new Point3D(4,6,-2);
+        Sphere s3 = new Sphere(p,2);
+        assertEquals(s3.surface(), 50.26548245743669);
+
+        Sphere s4 = new Sphere(7);
+        assertNotEquals(s2.surface(), 48.265);
     }
 
 }
