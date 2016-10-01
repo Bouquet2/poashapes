@@ -26,7 +26,14 @@ public class Point2DTest {
 
     @Test
     public void testIsOrigin() throws Exception {
-
+        Point2D p = new Point2D(0,0);
+        assertTrue(p.isOrigin());
+        Point2D p2 = new Point2D(5,0);
+        assertFalse(p2.isOrigin());
+        Point2D p3 = new Point2D(0,5);
+        assertFalse(p3.isOrigin());
+        Point2D p4 = new Point2D(-5,3);
+        assertFalse(p4.isOrigin());
     }
 
     @Test
