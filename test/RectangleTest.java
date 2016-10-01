@@ -21,7 +21,15 @@ public class RectangleTest {
 
     @Test
     public void testSurface() throws Exception {
+        Rectangle r = new Rectangle(10,5);
+        assertEquals(r.surface(), 50.0);
 
+        Rectangle r2 = new Rectangle(0,0);
+        assertEquals(r2.surface(), 0.0);
+
+        Point2D p = new Point2D(5,10);
+        Rectangle r3 = new Rectangle(4,3);
+        assertEquals(r3.surface(), 12.0);
     }
 
 }
