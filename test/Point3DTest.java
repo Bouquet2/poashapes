@@ -12,7 +12,7 @@ public class Point3DTest {
         p.translate(5,-3,4);
         assertEquals(p.getX(), 5.0);
         assertEquals(p.getY(), -3.0);
-        assertEquals(p.getZ(), 4);
+        assertEquals(p.getZ(), 4.0);
 
         Point3D p2 = new Point3D(7,0,0);
         p2.translate(0,5,-5);
@@ -39,6 +39,13 @@ public class Point3DTest {
 
     @Test
     public void testDistance() throws Exception {
+        Point3D p1 = new Point3D(0,0,0);
+        Point3D p2 = new Point3D(0,0,0);
+        assertEquals(p1.distance(p2), 0.0);
+
+        Point3D p3 = new Point3D(1,1,1);
+        Point3D p4 = new Point3D(2,2,2);
+        assertEquals(p3.distance(p4), 1.7320508075688772);
 
     }
 
