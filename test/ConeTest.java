@@ -32,7 +32,14 @@ public class ConeTest {
 
     @Test
     public void testLateralSurface() throws Exception {
+        Cone c = new Cone(4,9);
+        assertEquals(c.lateralSurface(), 113.09733552923255);
 
+        Cone c2 = new Cone(0,0);
+        assertEquals(c2.lateralSurface(), 0.0);
+
+        Cone c3 = new Cone(7,4);
+        assertNotEquals(c3.lateralSurface(), 45.0);
     }
 
     @Test
