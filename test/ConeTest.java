@@ -44,7 +44,14 @@ public class ConeTest {
 
     @Test
     public void testSurface() throws Exception {
+        Cone c = new Cone(4,9);
+        assertEquals(c.surface(), 367.5663404700058);
 
+        Cone c2 = new Cone(0,0);
+        assertEquals(c2.surface(), 0.0);
+
+        Cone c3 = new Cone(12,7);
+        assertNotEquals(c3.surface(), 258.0);
     }
 
 }
