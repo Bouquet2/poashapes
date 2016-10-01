@@ -38,7 +38,17 @@ public class Point2DTest {
 
     @Test
     public void testDistance() throws Exception {
+        Point2D p1 = new Point2D(0,0);
+        Point2D p2 = new Point2D(0,0);
+        assertEquals(p1.distance(p2), 0.0);
 
+        Point2D p3 = new Point2D(2,0);
+        Point2D p4 = new Point2D(0,2);
+        assertEquals(p3.distance(p4), 2.8284271247461903);
+
+        Point2D p5 = new Point2D(-5,4);
+        Point2D p6 = new Point2D(2,-1);
+        assertEquals(p5.distance(p6), 8.602325267042627);
     }
 
 }
