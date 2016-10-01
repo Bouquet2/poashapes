@@ -16,8 +16,8 @@ public class Point2D {
     }
 
     public void translate(double dx, double dy) {
-        this.x = dx;
-        this.y = dy;
+        this.x = this.x +dx;
+        this.y = this.y + dy;
     }
 
     public double getX() {
@@ -39,17 +39,33 @@ public class Point2D {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Point2D point2D = (Point2D) o;
+
+        if (Double.compare(point2D.x, x) != 0) return false;
+        return Double.compare(point2D.y, y) == 0;
+
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(x);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(y);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Point2D{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }
