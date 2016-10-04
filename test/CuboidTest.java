@@ -25,17 +25,17 @@ public class CuboidTest {
     @Test
     public void testVolume() throws Exception {
         Cuboid c = new Cuboid(2,4,6);
-        assertEquals(c.volume(), 88.0);
+        assertEquals(c.volume(), 48.0);
 
         Cuboid c2 = new Cuboid(0,0,0);
         assertEquals(c2.volume(), 0.0);
 
-        Point3D p = new Point3D(5,9,15);
-        Cuboid c3 = new Cuboid(p,4,6,8);
-        assertEquals(c3.volume(), 208.0);
+        Point3D p = new Point3D(1,4,10);
+        Cuboid c3 = new Cuboid(p,5,9,15);
+        assertEquals(c3.volume(), 675.0);
 
         Cuboid c4 = new Cuboid(4,7,9);
-        assertNotEquals(c4.volume(), 94.025);
+        assertNotEquals(c4.volume(), 151.0);
     }
 
 }
