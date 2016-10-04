@@ -12,6 +12,10 @@ public abstract class Shape2D extends Shape implements Translatable2D {
         this.refPoint = refPoint;
     }
 
+    public void translate(double dx, double dy) {
+        refPoint.translate(dx, dy);
+    }
+
     abstract double perimeter();
 
     public Point2D getRefPoint() {
