@@ -27,7 +27,7 @@ public class Cuboid extends Shape3D{
 
     @Override
     public double volume() {
-        return 2*width*length + 2*length*height + 2*height*width;
+        return width*length*height;
     }
 
     public double getLength() {
