@@ -1,7 +1,7 @@
 /**
  * Created by Valentin on 01/10/2016.
  */
-public abstract class Shape3D extends Shape implements Translatable3D{
+public abstract class Shape3D extends Shape implements Translatable3D {
     private Point3D refPoint;
 
     public Shape3D() {
@@ -10,6 +10,10 @@ public abstract class Shape3D extends Shape implements Translatable3D{
 
     public Shape3D(Point3D refPoint) {
         this.refPoint = refPoint;
+    }
+
+    public void translate(double dx, double dy, double dz) {
+        refPoint.translate(dx, dy, dz);
     }
 
     public abstract double volume();
